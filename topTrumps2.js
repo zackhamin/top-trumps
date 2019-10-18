@@ -62,12 +62,23 @@ let deck1 = pokemonTrumps.splice(0,15);
 
 let deck2 = pokemonTrumps.splice(0,15)
 
+console.log(deck1[1]);
+console.log(deck2[1]);
 
-for(i=0; i<deck1.length;i++) {
-    console.log(deck1[i])};
+const roundOne = (deck1,deck2) => {
+    if (deck1.attack < deck2.attack) {
+        console.log("Player Two Wins this round!")}
+    else if (deck1.attack > deck2.attack) {
+        console.log("Player One Wins This Round!")}   
+}
 
-for(i=0; i<deck2.length;i++) {
-        console.log(deck2[i])};    
+roundOne();
+
+// for(i=0; i<deck1.length;i++) {
+//     console.log(deck1[i])};
+
+// for(i=0; i<deck2.length;i++) {
+//         console.log(deck2[i])};    
 
 
 // var compare = deck1[Math.floor(Math.random()*deck1.length)];
