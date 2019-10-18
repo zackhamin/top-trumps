@@ -48,6 +48,10 @@ let pokemonTrumps = [
 
 ]
 
+alert("Welcome to Top Trumps; Pokemon Edition!")
+
+
+// fischer rayes shuffle
 let i = pokemonTrumps.length, j, temp;
     while(--i > 0) {
         j = Math.floor(Math.random() * (i+1));
@@ -58,42 +62,27 @@ let i = pokemonTrumps.length, j, temp;
 
 
 //shuffled decks
-let deck1 = pokemonTrumps.splice(0,15);
+let deck1 = pokemonTrumps.splice(0,14);
 
-let deck2 = pokemonTrumps.splice(0,15)
+let deck2 = pokemonTrumps.splice(15,29)
 
-console.log(deck1[1]);
-console.log(deck2[1]);
+play1 = deck1[0];
+play2 = deck2[0];
 
-const roundOne = (deck1,deck2) => {
-    if (deck1.attack < deck2.attack) {
+console.log(play1);
+console.log(play2);
+
+const roundOne = () => {
+    if (play1.attack < play2.attack) {
         console.log("Player Two Wins this round!")}
-    else if (deck1.attack > deck2.attack) {
+    else if (play1.attack > play2.attack) {
         console.log("Player One Wins This Round!")}   
 }
 
 roundOne();
 
-// for(i=0; i<deck1.length;i++) {
-//     console.log(deck1[i])};
-
-// for(i=0; i<deck2.length;i++) {
-//         console.log(deck2[i])};    
 
 
-// var compare = deck1[Math.floor(Math.random()*deck1.length)];
-
-
-
-// const gamePlay = () => {
-//     if (deck1 >= deck2) {
-//     console.log("Player one wins this round!"); 
-//     }
-//     else 
-//         {console.log("Player Two wins this round!")}
-
-
-// gamePlay(deck1,deck2);
 
 
 
