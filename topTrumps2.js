@@ -48,8 +48,6 @@ let pokemonTrumps = [
 
 ]
 
-
-
 let i = pokemonTrumps.length, j, temp;
     while(--i > 0) {
         j = Math.floor(Math.random() * (i+1));
@@ -59,8 +57,32 @@ let i = pokemonTrumps.length, j, temp;
 }
 
 
+//shuffled decks
+let deck1 = pokemonTrumps.splice(0,15);
 
-console.log(pokemonTrumps);
+let deck2 = pokemonTrumps.splice(0,15)
+
+
+for(i=0; i<deck1.length;i++) {
+    console.log(deck1[i])};
+
+for(i=0; i<deck2.length;i++) {
+        console.log(deck2[i])};    
+
+
+// var compare = deck1[Math.floor(Math.random()*deck1.length)];
+
+
+
+// const gamePlay = () => {
+//     if (deck1 >= deck2) {
+//     console.log("Player one wins this round!"); 
+//     }
+//     else 
+//         {console.log("Player Two wins this round!")}
+
+
+// gamePlay(deck1,deck2);
 
 
 
