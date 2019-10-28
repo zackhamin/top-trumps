@@ -48,9 +48,6 @@ let pokemonTrumps = [
 
 ]
 
-alert("Welcome to Top Trumps; Pokemon Edition!")
-
-
 // fischer rayes shuffle
 let i = pokemonTrumps.length, j, temp;
     while(--i > 0) {
@@ -63,23 +60,41 @@ let i = pokemonTrumps.length, j, temp;
 
 //shuffled decks
 let deck1 = pokemonTrumps.splice(0,14);
-
-let deck2 = pokemonTrumps.splice(15,29)
+let deck2 = pokemonTrumps.splice(0,14);
+// console.log(deck1)
+// console.log('----------------------')
+// console.log(deck2);
 
 play1 = deck1[0];
 play2 = deck2[0];
 
-console.log(play1);
-console.log(play2);
+// console.log(play1);
+// console.log(play2);
 
 const roundOne = () => {
     if (play1.attack < play2.attack) {
-        console.log("Player Two Wins this round!")}
+        console.log("Player Two Wins this round!") 
+        deck2.push(deck1[0])
+        console.log(deck2);
+        console.log("--------");        
+        console.log(deck1);
+        deck1.splice(0,1);
+
+        //console.log(deck1);
+      
+    }
+    
     else if (play1.attack > play2.attack) {
-        console.log("Player One Wins This Round!")}   
+        console.log("Player One Wins This Round!")}
 }
 
-roundOne();
+roundOne()
+
+
+
+
+
+
 
 
 
